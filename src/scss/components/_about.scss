@@ -1,0 +1,110 @@
+.about {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 150px;
+    @media screen and (max-width: 391px) {
+        margin-top: 50px;
+        padding-top: 50px;   
+    }
+}
+
+.about-img {
+    position: absolute;
+    bottom: -630px;
+    left: 0;
+    z-index: -2;
+    @media screen and (max-width: 391px) {
+        display: none;   
+    }
+}
+
+.about-vector {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    z-index: -2;
+    @media screen and (max-width: 391px) {
+        bottom: 500px;
+    }
+}
+
+.about-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 13px;
+    @media screen and (max-width: 391px) {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+}
+
+.about-title {
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    @media screen and (max-width: 391px) {
+        font-size: 40px;   
+    }
+}
+
+.about-inner {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 391px) {
+        justify-content: start;
+    }
+}
+
+.about-inner-logo-mobile {
+    display: none;
+    @media screen and (max-width: 391px) {
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        right: 0;
+    }
+}
+
+.about-inner-logo {
+    @media screen and (max-width: 391px) {
+        display: none;
+    }
+}
+
+.about-inner-content {
+    width: 60%;
+    margin-left: 20px;
+    @media screen and (max-width: 391px) {
+        width: 100%; 
+        margin-left: 0px;  
+        width: 346px;
+    }
+}
+
+.about-inner-content-title {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    max-width: 700px;
+    width: 100%;
+    line-height: 1.1;
+    @media screen and (max-width: 391px) {
+        font-size: 25px;   
+    }
+}
+
+.about-inner-content-mini-text, .about-inner-content-text {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 635px;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.about-inner-content-mini-text {
+    margin-bottom: 30px;
+}

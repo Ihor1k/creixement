@@ -1,0 +1,214 @@
+.equipment {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 150px;
+    @media screen and (max-width: 391px) {
+        margin-top: 35px;
+        padding-top: 35px;   
+    }
+}
+
+.equipment-bckg {
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    z-index: -2;
+    @media screen and (max-width: 391px) {
+        display: none;
+    }   
+}
+
+.equipment-img {
+    position: absolute;
+    right: 0;
+    top: -120px;
+    z-index: -2;
+}
+
+.equipment-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    
+    @media screen and (max-width: 391px) {
+        margin-bottom: 48px;   
+    }
+}
+
+.equipment-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #F5F5F7;
+    opacity: .7;
+    margin-bottom: 13px;
+}
+
+.equipment-title {
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #FEF4E7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    @media screen and (max-width: 391px) {
+        font-size: 40px;   
+    }
+}
+
+.equipment-btn {
+    background: linear-gradient(90deg, #0FB66B, #024D43);
+    border: none;
+    border-radius: 56px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    @media screen and (max-width: 391px) {
+        display: none;   
+    }
+}
+
+.equipment-btn img {
+    margin-left: 10px;
+}
+
+.equipment-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    @media screen and (max-width: 391px) {
+        flex-direction: column;   
+    }
+}
+
+.equipment-block {
+    width: 40%;
+    @media screen and (max-width: 391px) {
+        width: 100%;   
+    }
+}
+
+.equipment-block-context {
+    position: sticky;
+    top: 130px;
+}
+
+.equipment-block-title {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    line-height: 1.1;
+    // position: sticky;
+    // top: 130px;
+    @media screen and (max-width: 391px) {
+        font-size: 25px;   
+    }
+    
+}
+
+.equipment-block-text, .equipment-block-text-text {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.2;
+    max-width: 520px;
+    width: 100%;
+    // position: sticky;
+    // top: 465px;
+}
+
+.equipment-block-text {
+    margin-bottom: 25px;
+    // position: sticky;
+    // top: 355px;
+}
+
+.equipment-container {
+    width: 45%;
+    margin-top: 20px;
+    @media screen and (max-width: 391px) {
+        width: 100%;
+        margin-top: 35px;    
+    }
+}
+
+.equipment-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    @media screen and (max-width: 391px) {
+        row-gap: 25px;    
+    }
+}
+
+.equipment-slide {
+    padding: 100px 41px;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #272727;
+    border-radius: 30px;
+
+    opacity: 0;
+    transform: translateY(100%);
+
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
+    // position: relative;
+    // opacity: 0;
+    // transform: translateY(30px);
+    // transition: opacity 500ms ease, transform 500ms ease;
+   
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 391px) {
+        font-size: 25px;
+    }
+}
+
+.equipment-slide.equipment-show {
+    opacity: 1;
+    transition: all 900ms;
+    transform: translateY(0%);
+}
+
+.slide-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 30px;
+
+    @media screen and (max-width: 391px) {
+        display: none;
+    }
+}
+
+.slide-img-mobile {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    
+    @media screen and (max-width: 391px) {
+        display: block;
+        
+    }
+}

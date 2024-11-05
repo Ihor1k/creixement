@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: black;
+    color: #fff;
+}
+
+.anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 1000ms ease 0s;
+}
+
+.anim-show.-active, .-active .anim-show {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.anim-items {
+    overflow: hidden;
+}

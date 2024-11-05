@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creixement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="/" class="header-logo">
+            <img src="./images/logo.svg" width="48" height="48" alt="Logo" />
+            <p>Creixement</p>
+          </a>
+          <div class="header-menu">
+            <a href="#about" class="header-link">Про нас</a>
+            <a href="#values" class="header-link">Цінності</a>
+            <a href="#why" class="header-link">Переваги</a>
+            <a href="#equipment" class="header-link">Обладнання</a>
+            <a href="#pop-up" class="header-link open-pop-up">Контакти</a>
+            <a href="./politic.html" class="header-politic"
+              >Політика конфіденційності</a
+            >
+            <p class="header-text">
+              Ⓒ 2020-2024, ТОВ “КРЕЙКСМЕНТ”. Всі права захищені.
+            </p>
+            <img class="header-bckg" src="./images/header-bckg.png" alt="" />
+            <div class="burger-close"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+
+          <div class="burger">
+            <div class="burger-dots">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="pop-up" class="pop-up">
+      <img src="./images/pop-up-bckg.png" class="pop-up-bckg" alt="" />
+      <img src="./images/pop-up-img.png" class="pop-up-img" alt="" />
+      <div class="pop-up-container">
+        <div class="pop-up-block">
+          <h4 class="pop-up-title">Залишись питання?</h4>
+          <p class="pop-up-text">Напишіть нам :)</p>
+          <form class="pop-up-form">
+            <input
+              type="text"
+              id="pop-up-name"
+              name="name"
+              placeholder="Ім'я"
+              required
+            />
+            <input
+              type="email"
+              id="pop-up-email"
+              name="email"
+              placeholder="Імейл"
+              required
+            />
+            <input
+              type="text"
+              id="pop-up-subject"
+              name="subject"
+              placeholder="Назва запиту"
+              required
+            />
+            <textarea
+              type="text"
+              id="pop-up-message"
+              name="message"
+              placeholder="Повідомлення"
+              rows="6"
+              required
+            ></textarea>
+
+            <label class="pop-up-custom-checkbox">
+              <input type="checkbox" name="privacy" required />
+              <span class="pop-up-checkmark"></span>
+              <p>
+                Я прочитав і приймаю
+                <a href="./politic.html" class="agree-politic">
+                  Політику конфіденційності.</a
+                >
+              </p>
+            </label>
+
+            <button type="submit" class="pop-up-btn">
+              Відправити
+              <img
+                src="./images/contacts-btn.svg"
+                width="40"
+                height="40"
+                alt=""
+              />
+            </button>
+          </form>
+          <div class="pop-up-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="success-popup" class="success-pop-up">
+      <div class="success-pop-up-container">
+        <div class="success-pop-up-block">
+          <h4 class="success-pop-up-title">Успіх</h4>
+          <img
+            src="./images/pop-up-logo.svg"
+            width="184"
+            height="184"
+            alt="Logo"
+          />
+          <p class="success-pop-up-text">Вашу заявку прийнято.</p>
+          <p class="success-pop-up-text">
+            Незабаром з вами зв'яжуться для отримання додаткової інформації.
+          </p>
+          <button
+            class="success-pop-up-btn"
+            onclick="closePopup('success-popup')"
+          >
+            Продовжити
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="error-popup" class="error-pop-up">
+      <div class="error-pop-up-container">
+        <div class="error-pop-up-block">
+          <h4 class="error-pop-up-title">Помилка</h4>
+          <img
+            src="./images/pop-up-logo.svg"
+            width="184"
+            height="184"
+            alt="Logo"
+          />
+          <p class="error-pop-up-text">Щось пішло не так. Спробуйте ще раз!</p>
+          <button class="error-pop-up-btn" onclick="closePopup('error-popup')">
+            Продовжити
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero" id="hero">
+      <img class="hero-background" src="./images/hero-bckg.webp" alt="" />
+      <img class="hero-mobile" src="./images/hero-mobile.png" alt="" />
+      <div class="container">
+        <div class="hero-content anim-items">
+          <h1 class="hero-title anim-show">
+            Інноваційне <br />
+            медичне обладнання
+          </h1>
+          <p class="hero-text anim-show">
+            Creixement готовий допомогти вам знайти рішення, яке покращить
+            роботу вашого медичного закладу та підвищить якість медичних послуг
+            для пацієнтів
+          </p>
+          <a href="#values" class="hero-btn anim-show"
+            >Детальніше
+            <img src="./images/button-hero.svg" width="40" height="40" alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <img class="about-img" src="./images/about-bckg.png" alt="" />
+      <div class="container">
+        <div class="about-content anim-items">
+          <p class="about-subtitle anim-show">Вас вітає компанія</p>
+          <h2 class="about-title anim-show">CREIXEMENT</h2>
+        </div>
+        <div class="about-inner">
+          <div class="anim-items">
+            <img
+              class="about-inner-logo anim-show"
+              src="./images/about-logo.svg"
+              width="383"
+              height="392"
+              alt="Logo CREIXEMENT"
+            />
+            <img
+              class="about-inner-logo-mobile anim-show"
+              src="./images/about-logo-mobile.svg"
+              alt=""
+            />
+          </div>
+          <div class="about-inner-content">
+            <div class="about-inner-content-title anim-items">
+              <p class="anim-show">
+                Creixement — компанія, яка надає професійні послуги з постачання
+                медичного обладнання в Україні
+              </p>
+            </div>
+            <div class="about-inner-content-mini-text anim-items">
+              <p class="anim-show">
+                Ми пропонує комплексні послуги, які включають продаж, доставку
+                та встановлення медичного обладнання.
+              </p>
+            </div>
+            <div class="about-inner-content-text anim-items">
+              <p class="anim-show">
+                Наша команда допомагає з вибором медичного обладнання, надає
+                консультації з її експлуатації та обслуговування. Також ми
+                здійснюємо сервісне обслуговування та технічну підтримку, що
+                забезпечує довготривале використання та максимальну ефективність
+                апаратів.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="about-vector" src="./images/about-vector.png" alt="" />
+    </section>
+
+    <section class="values" id="values">
+      <div class="container">
+        <div class="values-content anim-items">
+          <h3 class="values-title anim-show">Наші цінності</h3>
+          <button class="values-btn anim-show">
+            Стати частиною команди
+            <img src="./images/values-btn.svg" width="40" height="40" alt="" />
+          </button>
+        </div>
+        <div class="values-inner">
+          <div class="values-team anim-items">
+            <p class="values-team-title anim-show">Команда Creixement</p>
+            <p class="values-team-text anim-show">
+              Наша команда — це досвідчені професіонали, які поділяють спільну
+              мету: забезпечувати медичні установи найсучаснішим і надійним
+              обладнанням, що відповідає потребам як лікарів, так і пацієнтів.
+            </p>
+          </div>
+          <div class="values-mission anim-items">
+            <p class="values-mission-title anim-show">Наша місія</p>
+            <p class="values-mission-text anim-show">
+              Наша місія полягає в тому, щоб зробити передові медичні технології
+              доступними для кожного, сприяючи розвитку охорони здоров'я та
+              покращенню якості життя.
+            </p>
+          </div>
+          <button class="values-btn-mobile">
+            Стати частиною команди
+            <img src="./images/values-btn.svg" width="40" height="40" alt="" />
+          </button>
+        </div>
+        <div class="anim-items">
+          <img
+            class="values-img anim-show"
+            src="./images/values-img.jpg"
+            width="1420"
+            height="224"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="anim-items">
+        <img
+          class="values-img-mobile anim-show"
+          src="./images/values-img-mobile.png"
+          width="385"
+          height="224"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <img class="why-background" src="./images/why-bckg1.png" alt="" />
+      <img class="why-img" src="./images/why-bckg2.png" alt="" />
+      <div class="container">
+        <div class="why-content anim-items">
+          <h3 class="why-title anim-show">Чому обирають саме нас?</h3>
+          <p class="why-text anim-show">Якість. Довіра. Відповідальність.</p>
+        </div>
+        <div class="why-inner anim-items">
+          <div class="why-block anim-show">
+            <img
+              src="./images/why-icon1.png"
+              width="85"
+              height="72"
+              alt=""
+              class="why-block-icon"
+            />
+            <p class="why-block-title">Сервісна підтримка</p>
+            <p class="why-block-text">
+              Ми не просто продаємо обладнання, а й пропонуємо повний спектр
+              сервісної підтримки.
+            </p>
+          </div>
+          <div class="why-block anim-show">
+            <img
+              src="./images/why-icon2.png"
+              width="77"
+              height="72"
+              alt=""
+              class="why-block-icon"
+            />
+            <p class="why-block-title">Надійність та якість</p>
+            <p class="why-block-text">
+              Ми співпрацюємо лише з перевіреними виробниками, надаючи клієнтам
+              продукт, якому можна довіряти.
+            </p>
+          </div>
+          <div class="why-block anim-show">
+            <img
+              src="./images/why-icon3.png"
+              width="75"
+              height="72"
+              alt=""
+              class="why-block-icon"
+            />
+            <p class="why-block-title">Інноваційні рішення</p>
+            <p class="why-block-text">
+              Ми постачаємо сучасне обладнання, яке сприяє точнішій діагностиці
+              та ефективному лікуванню.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipment" id="equipment">
+      <img class="equipment-bckg" src="./images/equipment-bckg.png" alt="" />
+      <img class="equipment-img" src="./images/equipment-bckg2.png" alt="" />
+      <div class="container">
+        <div class="equipment-content">
+          <div class="equipment-context anim-items">
+            <p class="equipment-subtitle anim-show">Медичне обладнання</p>
+            <h3 class="equipment-title anim-show">
+              Обладнання, <br />
+              яким ми пишаємось
+            </h3>
+          </div>
+          <div class="anim-items">
+            <button class="equipment-btn anim-show">
+              Детальніше
+              <img
+                src="./images/button-hero.svg"
+                width="40"
+                height="40"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div class="equipment-inner">
+          <div class="equipment-block">
+            <div class="equipment-block-context anim-items">
+              <p class="equipment-block-title anim-show">
+                Наше медичне обладнання — це поєднання інноваційних технологій,
+                високої точності та надійності.
+              </p>
+              <p class="equipment-block-text anim-show">
+                Ми пропонуємо широкий асортимент апаратів, яка задовольняє
+                найсуворіші стандарти якості, допомагаючи медичним установам
+                надавати пацієнтам найкращий рівень обслуговування.
+              </p>
+              <p class="equipment-block-text-text anim-show">
+                У нашому каталозі є обладнання для діагностики, моніторингу та
+                лікування, яке створене для ефективної роботи в умовах
+                інтенсивної експлуатації та відповідає потребам сучасної
+                медицини.
+              </p>
+            </div>
+          </div>
+
+          <div class="equipment-container">
+            <div class="equipment-wrapper">
+              <div class="equipment-slide">
+                <div class="slide-title">Реабілітація</div>
+                <img
+                  class="slide-img"
+                  src="./images/equipment-slider1.png"
+                  width="240"
+                  height="240"
+                  alt=""
+                />
+                <img
+                  class="slide-img-mobile"
+                  src="./images/equipment-slider-mobile1.png"
+                  alt=""
+                />
+              </div>
+              <div class="equipment-slide">
+                <div class="slide-title">Хірургія</div>
+                <img
+                  class="slide-img"
+                  src="./images/equipment-slider2.png"
+                  width="240"
+                  height="240"
+                  alt=""
+                />
+                <img
+                  class="slide-img-mobile"
+                  style="border-radius: 27px"
+                  src="./images/equipment-slider-mobile2.png"
+                  alt=""
+                />
+              </div>
+              <div class="equipment-slide">
+                <div class="slide-title">Фізіотерапія</div>
+                <img
+                  class="slide-img"
+                  src="./images/equipment-slider3.png"
+                  width="240"
+                  height="240"
+                  alt=""
+                />
+                <img
+                  class="slide-img-mobile"
+                  style="border-radius: 27px"
+                  src="./images/equipment-slider-mobile3.png"
+                  alt=""
+                />
+              </div>
+              <div class="equipment-slide">
+                <div class="slide-title">Діагностика</div>
+                <img
+                  class="slide-img"
+                  src="./images/equipment-slider4.png"
+                  width="240"
+                  height="240"
+                  alt=""
+                />
+                <img
+                  class="slide-img-mobile"
+                  style="border-radius: 25px"
+                  src="./images/equipment-slider-mobile4.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="anim-items">
+          <h3 class="contacts-title anim-show">Звʼязатися з нашою командою</h3>
+        </div>
+        <div class="contacts-inner">
+          <div class="anim-items">
+            <img
+              class="contacts-inner-img anim-show"
+              src="./images/contacts-img.png"
+              width="571"
+              height="487"
+              alt=""
+            />
+          </div>
+          <div class="contacts-block">
+            <form id="contactsForm" class="contacts-form anim-items">
+              <h4 class="contacts-form-title anim-show">Залишились питання?</h4>
+              <p class="contacts-form-text anim-show">
+                Ми завжди готові відповісти на ваші питання. <br />
+                Напишіть, нам ми чекаємо.
+              </p>
+
+              <div class="contacts-form-inputs anim-show">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ім'я"
+                  required
+                />
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Імейл"
+                  required
+                />
+              </div>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Назва запиту"
+                required
+              />
+
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                placeholder="Повідомлення"
+                required
+              ></textarea>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="privacy" required />
+                <span class="checkmark"></span>
+                <p>
+                  Я прочитав і приймаю
+                  <a href="./politic.html" class="agree-politic">
+                    Політику конфіденційності.</a
+                  >
+                </p>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="subscribe" />
+                <span class="checkmark"></span>
+                <p>
+                  Я хочу отримувати сповіщення про останні продукти, <br />
+                  події та передові ідеї.
+                </p>
+              </label>
+
+              <button type="submit" class="contacts-btn anim-show">
+                Відправити
+                <img
+                  src="./images/contacts-btn.svg"
+                  width="40"
+                  height="40"
+                  alt=""
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo">
+      <div class="logo-div anim-items">
+        <h2 class="anim-show">
+          <img
+            src="./images/animation-logo.svg"
+            width="134"
+            height="134"
+            alt=""
+          />CREIXEMENT
+        </h2>
+        <h2 class="anim-show">
+          <img
+            src="./images/animation-logo.svg"
+            width="134"
+            height="134"
+            alt=""
+          />CREIXEMENT
+        </h2>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="\" class="footer-logo anim-items">
+          <img
+            class="anim-show"
+            src="./images/logo.svg"
+            width="48"
+            height="48"
+            alt="Logo"
+          />
+          <p class="anim-show">Creixement</p>
+        </a>
+        <div class="footer-inner">
+          <div class="footer-column anim-items">
+            <p class="footer-text anim-show">
+              04053, Україна, м. Київ, вул. Січових Стрільців, будинок 21, Офіс
+              501
+            </p>
+            <p class="footer-text anim-show">info@creixement.com</p>
+            <p class="footer-text anim-show">+38 (050) 254-43-86</p>
+          </div>
+          <div class="footer-column anim-items">
+            <p class="footer-title anim-show">Карта сайту</p>
+            <a class="footer-nav anim-show" href="#about">Про нас</a>
+            <a class="footer-nav anim-show" href="#why">Переваги</a>
+            <a class="footer-nav anim-show" href="#equipment">Обладнання</a>
+            <a class="footer-nav anim-show" href="#contacts">Контакти</a>
+          </div>
+          <div class="footer-column anim-items">
+            <p class="footer-title anim-show">Шукайте нас</p>
+            <a class="footer-nav anim-show" href="\">Linkedin</a>
+            <a class="footer-nav anim-show" href="\">Facebook</a>
+          </div>
+        </div>
+        <div class="footer-button anim-items">
+          <a href="#top" class="footer-btn anim-show">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+
+        <div class="footer-block">
+          <p class="footer-block-text">
+            Ⓒ 2020-2024, ТОВ “КРЕЙКСМЕНТ”. Всі права захищені.
+          </p>
+          <a href="./politic.html" class="footer-block-politic"
+            >Політика конфіденційності</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/e3a9003433.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>

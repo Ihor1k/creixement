@@ -1,0 +1,80 @@
+.logo {
+    margin-top: 180px;
+    max-width: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 391px) {
+        margin-top: 80px;   
+    }
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    animation: logo 8s linear infinite;
+    @media screen and (max-width: 391px) {
+        width: 310%;
+        animation: logo 6s linear infinite;
+    }
+}
+
+.logo h2 {
+    white-space: nowrap;
+    width: 100%;
+    font-size: 136px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: 50px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 391px) {
+        font-size: 49px;
+        letter-spacing: 21px;
+    }
+    
+
+    // animation: play 0.8s steps(10) infinite,
+    //     step 10s linear infinite;
+    // position: absolute;
+    // right: 0;
+}
+
+.logo img {
+    margin-right: 45px;
+    @media screen and (max-width: 391px) {
+        margin-right: 20px;
+        width: 60px; 
+        height: 60px;  
+    }
+}
+
+// @keyframes play {
+//     100% {
+//         background-position: -100%;
+//     }
+// }
+
+// @keyframes step {
+//     100% {
+//         right: 100%;
+//     }
+// }
+
+// @keyframes logo {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//     100% {
+//         transform: translateX(-100%);
+//     }
+// }
+
+@keyframes logo {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
