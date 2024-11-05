@@ -2,7 +2,7 @@
     margin-top: 180px;
     max-width: 100%;
     overflow: hidden;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         margin-top: 80px;   
     }
 }
@@ -12,7 +12,7 @@
     align-items: center;
     width: 200%;
     animation: logo 8s linear infinite;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         width: 310%;
         animation: logo 6s linear infinite;
     }
@@ -27,7 +27,7 @@
     letter-spacing: 50px;
     display: flex;
     align-items: center;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         font-size: 49px;
         letter-spacing: 21px;
     }
@@ -41,7 +41,7 @@
 
 .logo img {
     margin-right: 45px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         margin-right: 20px;
         width: 60px; 
         height: 60px;  

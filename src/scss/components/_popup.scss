@@ -10,7 +10,7 @@
     pointer-events: none;
     opacity: 0; 
     transition: opacity 0.3s ease, transform 0.3s ease; /* Плавні переходи */
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 390px;
         width: 100%;
     }
@@ -51,7 +51,7 @@
 .pop-up-block {
     max-width: 400px;
     width: 100%;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 340px;
         width: 100%;
     }
@@ -73,7 +73,7 @@
     font-style: normal;
     font-weight: 400;
     margin-bottom: 50px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         margin-bottom: 20px;   
     }
 }
@@ -82,7 +82,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         row-gap: 10px;   
     }
 }
@@ -148,7 +148,7 @@
 }
 
 .pop-up-custom-checkbox p {
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         font-size: 12px;   
     }
 }
@@ -186,7 +186,7 @@
     font-size: 30px;
     color: #7B7B7B;
     cursor: pointer;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         right: 20px;
         top: 33px;
     }
@@ -209,7 +209,7 @@
         opacity: 1;
         pointer-events: auto;
     }
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 390px;
         width: 100%;   
         transform: scale(1);
@@ -235,7 +235,7 @@
     border-radius: 33px;
     background: rgba(255, 255, 255, 0.15);
     padding: 71px 40px 40px 40px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 380px;
         width: 100%;   
     }
@@ -243,7 +243,7 @@
 
 .success-pop-up-block img {
     margin: 32px 0px 24px 0px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         width: 133px;
         height: 133px;   
     }
@@ -256,7 +256,7 @@
     font-style: normal;
     font-weight: 400;
 
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         font-size: 30px;   
     }
 }
@@ -271,12 +271,12 @@
 
     &:not(:last-child) {
         margin-bottom: 10px;
-        @media screen and (max-width: 391px) {
+        @media screen and (max-width: 480px) {
             margin-bottom: 0px;
         }
     }
 
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         line-height: 2; 
     }
 }
@@ -295,7 +295,7 @@
     font-weight: 400;
     cursor: pointer;
     margin-top: 32px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         padding: 20px 100px;   
     }
 }
@@ -317,7 +317,7 @@
         opacity: 1;
         pointer-events: auto;
     }
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 390px;
         width: 100%;   
         transform: scale(1);
@@ -343,7 +343,7 @@
     border-radius: 33px;
     background: rgba(255, 255, 255, 0.15);
     padding: 71px 40px 40px 40px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         max-width: 380px;
         width: 100%;   
     }
@@ -351,7 +351,7 @@
 
 .error-pop-up-block img {
     margin: 32px 0px 24px 0px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         width: 133px;
         height: 133px;   
     }
@@ -363,7 +363,7 @@
     font-size: 46px;
     font-style: normal;
     font-weight: 400;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         font-size: 30px;   
     }
 }
@@ -378,11 +378,11 @@
 
     &:not(:last-child) {
         margin-bottom: 10px;
-        @media screen and (max-width: 391px) {
+        @media screen and (max-width: 480px) {
             margin-bottom: 0px;
         }
     }
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         line-height: 2; 
     }
 }
@@ -401,7 +401,7 @@
     font-weight: 400;
     cursor: pointer;
     margin-top: 32px;
-    @media screen and (max-width: 391px) {
+    @media screen and (max-width: 480px) {
         padding: 20px 100px;   
     }
 }
